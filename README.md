@@ -1,4 +1,5 @@
 cpp-groundwork-library
 ======================
 
-simple groundwork code for cpp apps
+* basic functionality
+* extend existing libraries such as boost.
