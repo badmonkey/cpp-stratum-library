@@ -1,0 +1,17 @@
+#ifndef STRATUM_MACRO_NAMESPACES
+#define STRATUM_MACRO_NAMESPACES
+
+#include "stratum/macro/helpers.hpp"
+
+
+#define NAMESPACE_PREPEND_NAMESPACE(X)  namespace X {
+#define NAMESPACE_APPEND_NAMESPACE(X)  }
+
+
+#define NAMESPACE_BEGIN(...)    MACRO_REDUCE(NAMESPACE_PREPEND_NAMESPACE, , __VA_ARGS__)
+#define NAMESPACE_END(...)      MACRO_REDUCE(NAMESPACE_APPEND_NAMESPACE, ,__VA_ARGS__)
+#define NAMESPACE(...)          MACRO_REDUCE(MACRO_EXPAND, ::, __VA_ARGS__)
+#define NAMESPACE_USE(...)      using namespace NAMESPACE(__VA_ARGS__)
+
+
+#endif //STRATUM_MACRO_NAMESPACES

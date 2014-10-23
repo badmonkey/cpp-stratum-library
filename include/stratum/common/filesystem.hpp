@@ -1,16 +1,12 @@
-#ifndef GROUNDWORK_UTILS_FILESYSTEM_HPP
-#define GROUNDWORK_UTILS_FILESYSTEM_HPP
+#ifndef STRATUM_COMMON_FILESYSTEM
+#define STRATUM_COMMON_FILESYSTEM
 
+#include "stratum/macro/namespaces.hpp"
 #include "boost/filesystem.hpp"
-#include <iostream>
 
 
-namespace groundwork
-{
-namespace utils
-{
-namespace filesystem
-{
+NAMESPACE_BEGIN(stratum, common, fs)
+
 namespace bfs = boost::filesystem;
 
 
@@ -28,8 +24,6 @@ FUNC foreach(const std::string& dir, FUNC f)
 } // foreach()
 
 
-} // namespace filesystem
-} // namespace utils
-} // namespace groundwork
+NAMESPACE_END(stratum, common, fs)
 
-#endif //GROUNDWORK_UTILS_FILESYSTEM_HPP
+#endif // STRATUM_COMMON_FILESYSTEM
